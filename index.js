@@ -3,7 +3,7 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
 const app = express();
-const port = 3000;
+const port = 3000 || process.env.PORT;
 
 // Initialize the WhatsApp client
 const client = new Client({
