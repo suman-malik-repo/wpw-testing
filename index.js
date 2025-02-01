@@ -23,6 +23,12 @@ client.on('ready', () => {
 // Start the client
 client.initialize();
 
+app.get("/ping", (req, res) => {
+    console.log("hit on /ping");
+    
+  res.status(200).end();
+});
+
 // Route to send a message
 app.get('/send-message', async (req, res) => {
     const { number, message } = req.query;
